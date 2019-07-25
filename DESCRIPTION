@@ -1,0 +1,20 @@
+Package: docshop
+Title: Doctor Shopping Functions
+Version: 0.1.0
+Authors@R: person("Brian", "Aronson", email = "bdaronson@gmail.com", role = c("aut", "cre"))
+Description: Personal Functions for Doctor Shopping Project
+Depends: R (>= 3.0.1),
+ usethis (>= 1.5.0),
+ here (>= 0.1),
+ tidyverse (>= 1.2.1),
+ bit64 (>= 0.9.7),
+ data.table (>= 1.11.8),
+ fst (>= 0.9.0),
+ rio (>= 0.5.10),
+ aws.s3 (>= 0.3.12),
+ stringr (>= 1.4.0),
+ withr (>= 2.1.2)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0
