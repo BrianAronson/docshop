@@ -6,6 +6,7 @@
 #' @example {
 #'     s3read(awsfile="s3://iuni-doctorshopping/derived_R_v3/pdmp_outcomes_zipcode_level/ZIP5/year/zip5_zipcode2007_pdmp.csv")
 #' }
+
 s3read_any = function(awsfile, localdirec=NULL,localfile = TRUE, ...) {
   #1) determine file type
       filetype<-tools::file_ext(awsfile)      
@@ -52,7 +53,7 @@ s3read_any = function(awsfile, localdirec=NULL,localfile = TRUE, ...) {
           if(filetype=="fst"){
               data = read_fst(tmp, as.data.table = TRUE, ...)  
           }else{
-              data = fread(tmp)  
+              data = fread(tmp, ...)  
           }
       #c) if the file was downloaded from aws, remove it from pc
           if(aws){
@@ -62,5 +63,3 @@ s3read_any = function(awsfile, localdirec=NULL,localfile = TRUE, ...) {
           invisible(gc())
           return(data)
 }
-
-
