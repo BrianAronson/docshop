@@ -2,8 +2,9 @@
 This package includes many functions created by BK and others for our doctor shopping project. Users are encouraged to document, add functions, and edit current functions as desired. 
 
 ## Installation
-To install, one must run both of the following lines:
+To install, make sure you have the **latest version of the `devtools` package**. Afterwards, run the following lines:
 
+    #install.packages("devtools")
     Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS = TRUE) 
     devtools::install_github("BrianAronson/docshop")
 Usually, the Sys.setenv function is not necessary, but due to this package's many dependencies, when installing the package, R will likely throw warnings that some of the functions were developed for different versions of R, and these warnings will be converted to errors that prevent installation.
