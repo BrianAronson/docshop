@@ -13,6 +13,7 @@ s3write_gz = function(data, object, aws = TRUE) {
     file.remove(paste0(tmp, ".gz"))
     invisible(gc())
   } else {
+    dir.create(dirname(object), recursive= TRUE,showWarnings = FALSE)
     fwrite(data, object)
     R.utils::gzip(object,
                   paste0(object, ".gz"),

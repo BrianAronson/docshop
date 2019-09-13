@@ -27,6 +27,7 @@ s3write_fst = function(data,object,compress=100){
     file.remove(tmp)
     invisible(gc())
   } else {
+    dir.create(dirname(object), recursive= TRUE,showWarnings = FALSE)
     write_fst(data,path=object,compress=compress)
   }
 }

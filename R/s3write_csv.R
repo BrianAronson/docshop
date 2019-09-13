@@ -8,6 +8,7 @@ s3write_csv = function(data, object, aws = TRUE) {
     readr::write_csv(data, x)
     put_object(rawConnectionValue(x), object = object)
   } else {
+    dir.create(dirname(object), recursive= TRUE,showWarnings = FALSE)
     fwrite(data, object)
   }
 }
