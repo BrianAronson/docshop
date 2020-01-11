@@ -14,7 +14,7 @@ s3write_gz = function(data, object, aws = TRUE) {
     invisible(gc())
   } else {
     dir.create(dirname(object), recursive= TRUE,showWarnings = FALSE)
-    if (str_detect(objects,'.gz')){
+    if (str_detect(object,'.gz')){
       object = gsub('.gz','',object)
     }
     fwrite(data, object)
